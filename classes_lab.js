@@ -76,35 +76,34 @@ class Dog{
     playFetch(){
         if (this.hungry) {
             this.hungry = false;
-            console.log(this.name, ` : Woof!!`);
+            console.log(this.name, " : Woof!!");
           } else {
-            console.log(this.name, ` doesn't look hungry`)
+            console.log(this.name, " doesn't look hungry")
           }
     }
     feed(){
         if (this.hungry) {
             this.hungry = false;
-            console.log(this.name, ` : Woof!!`);
+            console.log(this.name, " : Woof!!");
           } else {
-            console.log(this.name, ` doesn't look hungry`)
+            console.log(this.name, " doesn't look hungry")
           }
     }
     toString() {
-        let feeding = 'not hungry';
+        let feeding = "not hungry";
         if (this.hungry){
-          feeding = 'hungry';
+          feeding = "hungry";
         }
         return (`${this.name} is a ${this.mood} and ${feeding} ${this.breed}`);
       }
 };
 
-let dog1 = new Dog('Smoky', 'Beagle', 'Playful', false);
+let dog1 = new Dog("Smoky", "Beagle", "Playful", false);
 let dog2 = new Dog("Midnight", "Black Golden Retriever", "playful", true);
 let dog3 = new Dog("Storm", "Blue Nose Pit Bull", "Relax", false);
 console.log(dog1);
 console.log(dog2);
 console.log(dog3);
-console.log(``);
 
 
 
@@ -124,7 +123,7 @@ let freezingPoint = {
     fahrenheit: 32,
     Kelvin: 273
 };
-console.log(`The water's freezing temperature :`, freezingPoint);
+console.log("The water's freezing temperature :", freezingPoint);
 
 
 
@@ -163,10 +162,9 @@ let temp1 = new Celsius(-20);
 let temp2 = new Celsius(32);
 let temp3 = new Celsius(-2);
 
-console.log(temp1.celsius, `is bellow the freezing temperature`, temp1.isBelowFreezing());
-console.log(temp2.celsius, `is bellow the freezing temperature`, temp2.isBelowFreezing());
-console.log(temp3.celsius, `is bellow the freezing temperature`, temp3.isBelowFreezing());
-
+console.log(temp1.celsius, " is below the freezing temerature ", temp1.isBelowFreezing());
+console.log(temp2.celsius, " is below the freezing temerature ", temp2.isBelowFreezing());
+console.log(temp3.celsius, " is below the freezing temerature ", temp3.isBelowFreezing());
 
 
 
@@ -193,7 +191,7 @@ let myMovie = new Movie("Brideshead Revisited", 2008, "Britsh Drama",
  ["Matthew Goode as Charles Ryder,Ben Whishaw as Lord Sebastian Flyte, Hayley Atwell as Lady Julia Flyte, ect." ],
 "Befriended by aristocrat Sebastian Flyte (Ben Whishaw), Oxford student Charles Ryder (Matthew Goode) finds that the power and privilege  experienced by the family is seductive. On a visit to Brideshead, the ancestral home, he falls in love with his friend's sister, Julia (Hayley Atwell). Howe-ver, as Charles' ties to Sebastian and family deepen, he finds himself at odds with their strong Roman Catholicism.",);
 
-console.log(myMovie.blurb())
+console.log(myMovie.blurb());
 
 
 
@@ -230,8 +228,8 @@ class Vector{
       }
       getLength() {
         return Math.hypot(this.x, this.y);
-      }
-}
+      };
+};
 
 
 let vec1 = new Vector(1, 2);
@@ -239,8 +237,8 @@ let vec2 = new Vector(2, 3);
 console.log("The sum of ", vec1, " and ", vec2, " is ", vec1.plus(vec2));
 console.log("The difference of ", vec1, " and ", vec2, " is ", vec1.minus(vec2));
 
-let v3 = new Vector(3, 4)
-console.log("The length of ",v3, " is ", v3.getLength());
+let vec3 = new Vector(3, 4);
+console.log("The length of ",vec3, " is ", vec3.getLength());
 
 
 
@@ -260,9 +258,17 @@ class Cylinder{
         this.height = height;
     }
     getVolume(){
-
+        let volume = πr2h;
+        return volume = this.volume + volume;
+    }
+    getSurfaceArea(){
+        let surfaceArea = new surfaceArea;
+        return surfaceArea = this.surfaceArea + surfaceArea;
     }
 }
+let volume = new Volume(2,4);
+let surfaceArea = new SurfaceArea(5,4)
+console.log("the surfacearea is ", surfaceArea.getSurfaceArea(), "this volume is ", volume.getVolume())
 
 
 
