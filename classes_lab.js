@@ -251,25 +251,21 @@ console.log("The length of ",vec3, " is ", vec3.getLength());
 
 // c. Add an instance method `getSurfaceArea` that returns the [surface area](https://www.mathopenref.com/cylinderareamain.html)
 
-
-class Cylinder{
-    constructor(radius, height){
+class Cylinder {
+    constructor(radius, height) {
         this.radius = radius;
         this.height = height;
     }
-    getVolume(){
-        let volume = πr2h;
-        return volume = this.volume + volume;
+    getVolume() {
+        return (Math.PI) * (Math.pow(this.radius, 2)) * this.height;
     }
-    getSurfaceArea(){
-        let surfaceArea = new surfaceArea;
-        return surfaceArea = this.surfaceArea + surfaceArea;
+    getSurfaceArea() {
+        return 2 * (Math.PI) * (this.radius) * (this.radius + this.height);
     }
 }
-let volume = new Volume(2,4);
-let surfaceArea = new SurfaceArea(5,4)
-console.log("the surfacearea is ", surfaceArea.getSurfaceArea(), "this volume is ", volume.getVolume())
 
+let cyl1 = new Cylinder(4, 4);
+console.log(cyl1.getSurfaceArea());
 
 
 // ## Question 8
@@ -283,6 +279,32 @@ console.log("the surfacearea is ", surfaceArea.getSurfaceArea(), "this volume is
 // c. Filter your array of `Post` objects to only include posts made today.
 
 
+class Post {
+    constructor(datePosted, user, text) {
+        this.datePosted = datePosted;
+        this.user = user;
+        this.text = text;
+    }
+    postedToday() {
+        const today = new Date();
+        if(this.datePosted.getDate() === today.getDate()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+let postObjs = [
+    new Post(new Date(2019, 10, 21), "Flower", "I like the smell of roses"),
+    new Post(new Date(2019, 10, 21), "IDontLikeFlower", "I don't."),
+    new Post(new Date(2019, 10, 23), "Flower?", "Who cares?")
+]
+
+const today = new Date();
+
+console.log(postObjs[0].postedToday());
+console.log(postObjs.filter((post) => post.postedToday()));
 
 
 
